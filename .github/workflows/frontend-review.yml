@@ -9,6 +9,9 @@ on:
     paths:
       - 'client/**'
       - 'packages/data-provider/**'
+  push:
+    branches:
+      - fix/*
 
 jobs:
   tests_frontend_ubuntu:
