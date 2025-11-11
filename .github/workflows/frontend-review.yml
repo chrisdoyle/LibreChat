@@ -29,6 +29,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Show system resources
+        run: |
+          lscpu | grep -E 'Model name|Socket|Thread|Core'
+          free -h
+          df -h
+
       - name: Build Client
         run: npm run frontend:ci
 
